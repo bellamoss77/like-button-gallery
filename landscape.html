@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Photography Gallery</title>
+    <link rel="stylesheet" href="https://use.typekit.net/efa7ivj.css">
+    <link rel="stylesheet" href="Styles/navbar.css">
+    <link rel="stylesheet" href="Styles/styles.css">
+    <script src="https://kit.fontawesome.com/8f1f53b08b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <navbar class="active">
+            <h1>Landscape Photography</h1>
+            <ul>
+                <li><a href="nature.html">Nature</a></li>
+                <li><a href="pets.html">Pets</a></li>
+                <li><a href="ruins.html">Ruins</a></li>
+            </ul>
+        </navbar>
+
+        <aside class="hide-aside">
+            <ul>
+                <li><i class="fa-solid fa-bars"></i></li>
+                <li><a href="nature.html">Nature</a></li>
+                <li><a href="pets.html">Pets</a></li>
+                <li><a href="ruins.html">Ruins</a></li>
+            </ul>
+        </aside>
+
+        <div class="overlay hide-overlay"></div>
+    </nav>
+
+    <div id="galleryContainer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="JS/natureDOM.js"></script>
+    <script src="JS/natureGallery.js"></script>
+</body>

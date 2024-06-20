@@ -49,10 +49,11 @@ h1 {
     height: 100vh;
     width: 100vw;
     @include flex(row, space-around, center);
+    flex-wrap: wrap;
     
     .tile-link {
         text-decoration: none;
-        width: 30%;
+        width: 40%;
         height: auto;
         padding: 1rem 2rem;
 

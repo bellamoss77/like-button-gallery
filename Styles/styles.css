@@ -39,10 +39,11 @@ h1 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 #tileContainer .tile-link {
   text-decoration: none;
-  width: 30%;
+  width: 40%;
   height: auto;
   padding: 1rem 2rem;
 }
