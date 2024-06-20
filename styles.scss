@@ -1,0 +1,75 @@
+@import url("https://use.typekit.net/efa7ivj.css");
+
+$sansSerifFont: 'niveau-grotesk', sans-serif;
+$cursiveFont: 'dream-big-wide', cursive;
+$forestGreen: #003314;
+$beige: #9F8C76;
+$cream: #FCFBF4;
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+//      START STYLES        //
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: $sansSerifFont;
+    background-color: $forestGreen;
+    @include flex(column, center, center);
+}
+
+h1 {
+    font-family: $cursiveFont;
+    font-size: 5.5rem;
+    color: $cream;
+    margin: auto;    
+}
+
+#tileContainer {
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    @include flex(row, space-around, center);
+    
+    .tile-link {
+        text-decoration: none;
+        width: 30%;
+        height: auto;
+        padding: 1rem 2rem;
+
+        .tile {
+            height: 100%;
+            width: 100%;
+            padding: 1rem 3rem;
+            @include flex(column, center, center);
+            font-size: 3rem;
+            box-shadow: 10px 5px 5px #4b4339;
+            background-color: $beige;
+            color: $cream;
+
+            &:hover {
+                color: #000;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+@import url("https://use.typekit.net/efa7ivj.css");
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "niveau-grotesk", sans-serif;
+  background-color: #003314;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "dream-big-wide", cursive;
+  font-size: 5.5rem;
+  color: #FCFBF4;
+  margin: auto;
+}
+
+#tileContainer {
+  margin: auto;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#tileContainer .tile-link {
+  text-decoration: none;
+  width: 30%;
+  height: auto;
+  padding: 1rem 2rem;
+}
+#tileContainer .tile-link .tile {
+  height: 100%;
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  box-shadow: 10px 5px 5px #4b4339;
+  background-color: #9F8C76;
+  color: #FCFBF4;
+}
+#tileContainer .tile-link .tile:hover {
+  color: #000;
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */
