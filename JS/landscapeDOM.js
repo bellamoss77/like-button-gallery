@@ -129,7 +129,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ]
 
-    const populateGallery = () => {
-        
-    }
+    const loadImage = (img) => {
+        return new Promise((resolve) => {
+            const image = new Image();
+            image.src = img.src;
+            image.alt = img.alt;
+            image.onload = () => {
+                resolve({
+                    ...img,
+                    width: image.width,
+                    height: image.height
+                });
+            };
+        });
+    };
+
+    const populateGallery = async () => {
+        const imagePromises = images.map(img => loadImage(img));
+        const loadedImages = await Promise.all(imagePromises);
+
+        loadedImages.forEach(img => {
+            const galleryTile = document.createElement('div');
+            galleryTile.className = 'box';
+
+            if (img.height > img.width) {
+                galleryTile.classList.add('vertical');
+            } else {
+                galleryTile.classList.add('horizontal');
+            }
+
+            const imgEl = document.createElement('img');
+            imgEl.src = img.src;
+            imgEl.alt = img.alt;
+
+            galleryTile.appendChild(imgEl);
+            container.appendChild(galleryTile)
+        });
+    };
+
+    populateGallery();
 })

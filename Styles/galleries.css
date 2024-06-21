@@ -1,1 +1,47 @@
-/*# sourceMappingURL=galleries.css.map */
+@import url("https://use.typekit.net/efa7ivj.css");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "niveau-grotesk", sans-serif;
+  height: 100%;
+  width: 100vw;
+}
+
+#galleryContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2px;
+  width: 50vw;
+}
+#galleryContainer .box {
+  width: 100%;
+  height: auto;
+}
+#galleryContainer .box.vertical {
+  grid-row: span 2;
+  grid-column: span 1;
+}
+#galleryContainer .box.horizontal {
+  grid-row: span 1;
+  grid-column: span 2;
+}
+#galleryContainer .box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.5s ease;
+}
+#galleryContainer .box img:hover {
+  transform: scale(1.15);
+}
+
+@media screen and (max-width: 450px) {
+  .box {
+    grid-column: span 12 !important;
+  }
+}/*# sourceMappingURL=galleries.css.map */
